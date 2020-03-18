@@ -13,7 +13,7 @@ class Infegy:
     def run(self, api_key, endpoint, choice):
 
         query_jan11 = 'https://atlas.infegy.com/api/v2/' + endpoint + '.json?query_builder_detail=%7B%22or_items%22%3A%5B%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22corona%20virus%5C%22%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22covid-19%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22coronavirus%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22covid%2019%5C%22%22%7D%5D%7D&start_date=2020-01-11&end_date=Now&category=twitter%2Cfacebook%2Cinstagram%2Cpinterest&limit=200&api_key=' + api_key
-        query = 'https://atlas.infegy.com/api/v2/' + endpoint + '.json?query_builder_detail=%7B%22or_items%22%3A%5B%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22corona%20virus%5C%22%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22covid-19%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22coronavirus%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22covid%2019%5C%22%22%7D%5D%7D&start_date=2%20days%20ago&end_date=Now&category=twitter%2Cfacebook%2Cinstagram%2Cpinterest&limit=200&api_key=' + % api_key
+        query = 'https://atlas.infegy.com/api/v2/' + endpoint + '.json?query_builder_detail=%7B%22or_items%22%3A%5B%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22corona%20virus%5C%22%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22covid-19%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22coronavirus%22%7D%2C%7B%22type%22%3A%22text%22%2C%22value%22%3A%22%5C%22covid%2019%5C%22%22%7D%5D%7D&start_date=2%20days%20ago&end_date=Now&category=twitter%2Cfacebook%2Cinstagram%2Cpinterest&limit=200&api_key=' +  api_key
 
         if choice == 'jan 11':
             jan11_response = requests.get(url = query_jan11)
