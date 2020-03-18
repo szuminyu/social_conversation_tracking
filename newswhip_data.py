@@ -8,7 +8,7 @@ pd.set_option('display.max_columns', None)
 '''
 documentation: https://developer.newswhip.com/reference#articles
 
-api_key = 'your key
+api_key = 'your key'
 api_endpoint = 'https://api.newswhip.com/v1/articles?key=%s' or 'https://api.newswhip.com/v1/stats?key=%s'
 
 '''
