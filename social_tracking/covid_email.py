@@ -19,14 +19,11 @@ class covid_email_alert:
 
         smtp_server = 'smtp-mail.outlook.com'
         smtp_port = 587
-        smtp_username = 'szu-min_yu@dkcnews.com'
-        smtp_password = 'dkcSY02!'
+        smtp_username = your_username
+        smtp_password = your_password
 
-        #email_to_sm = 'szu-min_yu@dkcnews.com'
-        email_to = ['szu-min_yu@dkcnews.com', 'Kelsey_Fish@dkcnews.com', 'Michael_Moschella@dkcnews.com',
-                    'Nathan_adams@dkcnews.com', 'Dylan_Lopez@dkcnews.com', 'Allison_Nichols@dkcnews.com',
-                    'Argy_Momeni@dkcnews.com', 'Cara_Miller@dkcnews.com']
-        email_from = 'szu-min_yu@dkcnews.com'
+        email_to = email_to_people
+        email_from = email_from_person
         email_subject = 'Coronavirus Monitoring Report, ' + str(date.today())
 
 
@@ -62,9 +59,11 @@ class covid_email_alert:
 
 
 if __name__ == '__main__':
-    while True:
-        try:
+    while True: 
+        try: 
             t = datetime.today()
+            
+            #run the program at 9:15 during weekdays
             if t.hour == 9 and t.minute == 15 and t.weekday() != 5 and t.weekday() != 6:
                 exec(open('prep_data.py').read())
                 print('Read data')
